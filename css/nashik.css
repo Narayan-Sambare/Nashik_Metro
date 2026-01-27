@@ -1,0 +1,105 @@
+.body{
+    /* position: sticky; */
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+.marque{
+    display: flex;
+    background-color: #3C3C43;
+    line-height: 1.6em;
+    color: #D9CCED;
+    align-items: center;
+  }
+
+.pune-title-heading{
+    font-weight: 700;
+    font-size: 30px;
+    
+}
+
+.whatsApp{
+    width: 100%;
+    
+}
+
+.helpline{
+    width: 100%;
+}
+
+.explore{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.icon-contact{
+    width: 2rem;
+}
+
+.corner_round_box{
+    border-radius: 10px;
+}
+
+.icon-new{
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+}
+
+.round-text-1{
+    text-decoration: none;
+}
+
+.round-box-1:hover{
+    box-shadow: 0px 2px 4px 2px rgba(183, 189, 203, 0.3);
+    background-color: #e3f8e7;
+    border-radius: 10px;
+}
+
+.round-box-2:hover{
+    box-shadow: 0px 2px 4px 2px rgba(183, 189, 203, 0.3);
+    background-color: #e3f2f8;
+    border-radius: 10px;
+}
+
+.round-box-3:hover{
+    box-shadow: 0px 2px 4px 2px rgba(183, 189, 203, 0.3);
+    background-color: #eae3f8;
+    border-radius: 10px;
+}
+
+.round-box-4:hover{
+    box-shadow: 0px 2px 4px 2px rgba(183, 189, 203, 0.3);
+    background-color: #e3f2f8;
+    border-radius: 10px;
+}
+
+.light_purple_border{
+    border: solid #e2baf8;
+}
+
+.light_purple_border2{
+    border: solid #82b8ff;
+}
+
+.cursor:hover{
+    cursor: pointer;
+}
+
+.map-part{
+    box-shadow: 0px 2px 4px 2px rgba(183, 189, 203, 0.3);
+    border: solid #858585;
+    border-radius: 10px;
+}
+
+
+
+@media only screen and (max-width:750px) {
+ 
+  .logo-g20-section{
+    display: none;
+  }
+}
