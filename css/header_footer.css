@@ -1,0 +1,433 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Section */
+.logo-g20-section {
+    width: 100%;
+    height: 60px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.pune-title-heading {
+  display: flex;
+  width: 100%;
+}
+
+/* G20 Logo */
+.G20.logo {
+  max-width: 200px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.G20.logo:hover {
+  transform: scale(1.05);
+}
+
+/* WhatsApp Icon */
+.whatsApp,
+.whatsApp-second-logo {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.whatsApp:hover,
+.whatsApp-second-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Helpline Icon */
+.helpline {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.helpline:hover {
+  transform: scale(1.1);
+}
+
+/* Book Button Section */
+.book-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.pop-button {
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.pop-button:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.pop-button:active {
+  transform: translateY(0);
+}
+
+/* Modal Styles */
+.pop-box .modal-content {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pop-box .modal-header {
+  background-color: #28a745;
+  color: #ffffff;
+  border-radius: 10px 10px 0 0;
+}
+
+.pop-box .modal-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.pop-box .modal-body img {
+  margin: 10px 0;
+}
+
+.pop-box .modal-body p {
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #ffffff !important;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #6351ce !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #4a3ba8 !important;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-nav .nav-item {
+  margin: 0 5px;
+}
+
+.navbar-nav .nav-link {
+  color: #333 !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem !important;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #6351ce !important;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.navbar-nav .nav-link.dropdown-toggle::after {
+  margin-left: 5px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #6351ce;
+  color: #ffffff;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+  border: 2px solid #6351ce;
+  padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(99, 81, 206, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Marquee Styles */
+.marque {
+  display: flex;
+  background-color: #3C3C43;
+  line-height: 1.6em;
+  color: #D9CCED;
+  align-items: center;
+  width: 100%;
+  margin-top: 110px; /* Logo section (60px) + Navbar approximate height (50px) = 110px total */
+}
+
+.marque marquee {
+  width: 100%;
+}
+
+/* Main Content Padding for Fixed Header */
+main {
+  padding-top: 0; /* Marquee handles the spacing */
+}
+
+body {
+  padding-top: 0;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+  .pune-title-heading {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .G20.logo {
+    max-width: 150px;
+  }
+
+  .book-button {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem !important;
+  }
+
+  .marque {
+    margin-top: 120px; /* Adjusted for mobile navbar height */
+  }
+}
+
+/* ============================================
+   FOOTER STYLES
+   ============================================ */
+
+/* Footer Container */
+footer {
+  width: 100%;
+  margin-top: auto;
+  background-color: #1c2331;
+  color: #ffffff;
+}
+
+/* Social Media Section */
+footer section.d-flex {
+  background-color: #6351ce !important;
+  padding: 20px 40px;
+}
+
+footer section.d-flex .me-5 {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+/* Social Media Icons */
+.icon-contact {
+  width: 30px;
+  height: 30px;
+  margin: 0 8px;
+  transition: all 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+
+.icon-contact:hover {
+  transform: scale(1.2) translateY(-3px);
+  filter: brightness(0) invert(1) drop-shadow(0 4px 8px rgba(255, 255, 255, 0.3));
+}
+
+/* Footer Links Section */
+footer .container {
+  padding: 40px 20px;
+}
+
+footer h6 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+footer hr {
+  background-color: #7c4dff;
+  height: 2px;
+  border: none;
+  margin: 10px 0 20px 0;
+}
+
+footer p {
+  color: #b0b0b0;
+  line-height: 1.8;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+footer a.text-white {
+  color: #ffffff !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+footer a.text-white:hover {
+  color: #7c4dff !important;
+  transform: translateX(5px);
+}
+
+/* Contact Section Icons */
+footer .fas,
+footer .fab {
+  margin-right: 10px;
+  color: #7c4dff;
+  width: 20px;
+}
+
+/* Copyright Section */
+footer .text-center {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer .text-center a {
+  color: #7c4dff !important;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+footer .text-center a:hover {
+  color: #9c7aff !important;
+}
+
+/* Footer Grid Layout */
+footer .row {
+  margin: 0;
+}
+
+footer .col-md-3,
+footer .col-md-2,
+footer .col-md-4 {
+  margin-bottom: 30px;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  footer section.d-flex {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  footer section.d-flex .me-5 {
+    margin-bottom: 15px;
+    justify-content: center;
+  }
+
+  footer section.d-flex > div:last-child {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  footer .container {
+    padding: 30px 15px;
+  }
+
+  footer h6 {
+    font-size: 1rem;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+
+  .icon-contact {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  footer section.d-flex {
+    padding: 15px;
+  }
+
+  footer .container {
+    padding: 20px 10px;
+  }
+
+  footer .col-md-3,
+  footer .col-md-2,
+  footer .col-md-4 {
+    margin-bottom: 25px;
+  }
+}
+
+/* Additional Footer Enhancements */
+footer a[href^="http"] {
+  position: relative;
+}
+
+footer a[href^="http"]:hover::after {
+  content: " →";
+  transition: all 0.3s ease;
+}
+
+/* Smooth Scroll for Footer Links */
+footer a {
+  scroll-behavior: smooth;
+}
+
