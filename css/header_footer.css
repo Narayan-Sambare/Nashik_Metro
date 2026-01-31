@@ -15,63 +15,46 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo Section */
-.logo-g20-section {
+.logo-section {
     width: 100%;
-    height: 60px;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.pune-title-heading {
-  display: flex;
-  width: 100%;
+    height: 70px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 /* G20 Logo */
-.G20.logo {
-  max-width: 200px;
-  height: auto;
+.G20 {
+  width: 100%;
+  max-height: 50px;
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
-
-.G20.logo:hover {
-  transform: scale(1.05);
-}
-
 /* WhatsApp Icon */
-.whatsApp,
-.whatsApp-second-logo {
-  width: 40px;
-  height: 40px;
+.whatsApp {
+  width: 100%;
+  height: 50px;
+  object-fit: contain;
   transition: transform 0.3s ease;
   cursor: pointer;
 }
 
 .whatsApp:hover,
-.whatsApp-second-logo:hover {
+.helpline:hover {
   transform: scale(1.1);
 }
-
 /* Helpline Icon */
 .helpline {
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 45px;
+  object-fit: contain;
   transition: transform 0.3s ease;
   cursor: pointer;
 }
 
-.helpline:hover {
-  transform: scale(1.1);
-}
-
 /* Book Button Section */
-.book-button {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
 .pop-button {
   background-color: #28a745;
   color: #ffffff;
@@ -204,7 +187,7 @@ header {
   color: #D9CCED;
   align-items: center;
   width: 100%;
-  margin-top: 110px; /* Logo section (60px) + Navbar approximate height (50px) = 110px total */
+  margin-top: 130px; /* Logo section (80px) + Navbar approximate height (50px) = 130px total */
 }
 
 .marque marquee {
@@ -221,19 +204,57 @@ body {
 }
 
 /* Responsive Header */
+@media (max-width: 992px) {
+  header {
+    height: auto;
+  }
+  
+  .logo-section {
+    height: auto;
+    min-height: 60px;
+  }
+}
+
 @media (max-width: 768px) {
+  .logo-section {
+    min-height: auto;
+    padding: 12px 0;
+  }
+
   .pune-title-heading {
     flex-direction: column;
     text-align: center;
   }
 
+  .pune-title-heading .col-md-3 {
+    margin-bottom: 10px;
+  }
+
   .G20.logo {
-    max-width: 150px;
+    max-width: 180px;
+    max-height: 55px;
+  }
+
+  .whatsApp,
+  .whatsApp-second-logo,
+  .helpline {
+    width: 50px;
+    height: 50px;
+    max-width: 50px;
+    max-height: 50px;
   }
 
   .book-button {
     justify-content: center;
     margin-top: 10px;
+    width: 100%;
+  }
+
+  .pop-button {
+    width: 100%;
+    max-width: 200px;
+    padding: 8px 18px;
+    font-size: 0.95rem;
   }
 
   .navbar-brand {
@@ -246,7 +267,54 @@ body {
   }
 
   .marque {
-    margin-top: 120px; /* Adjusted for mobile navbar height */
+    margin-top: 130px; /* Adjusted for mobile navbar height */
+  }
+  
+  header {
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-section {
+    padding: 10px 0;
+    min-height: auto;
+  }
+
+  .G20.logo {
+    max-width: 150px;
+    max-height: 45px;
+  }
+
+  .whatsApp,
+  .whatsApp-second-logo,
+  .helpline {
+    width: 45px;
+    height: 45px;
+    max-width: 45px;
+    max-height: 45px;
+  }
+
+  .pop-button {
+    padding: 7px 15px;
+    font-size: 0.9rem;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem !important;
+  }
+
+  .marque {
+    margin-top: 150px; /* Extra space for collapsed mobile header */
+  }
+  
+  .marque marquee {
+    font-size: 12px;
   }
 }
 
@@ -266,6 +334,10 @@ footer {
 footer section.d-flex {
   background-color: #6351ce !important;
   padding: 20px 40px;
+}
+
+footer section.d-flex.justify-content-between.p-4 {
+  background-color: #6351ce;
 }
 
 footer section.d-flex .me-5 {
@@ -303,8 +375,15 @@ footer h6 {
 footer hr {
   background-color: #7c4dff;
   height: 2px;
+  width: 60px;
   border: none;
   margin: 10px 0 20px 0;
+}
+
+footer hr.mb-4.mt-0.d-inline-block.mx-auto {
+  width: 60px;
+  background-color: #7c4dff;
+  height: 2px;
 }
 
 footer p {
@@ -345,6 +424,15 @@ footer .text-center a {
   color: #7c4dff !important;
   font-weight: 600;
   transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+footer .text-center {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+footer.text-center.text-lg-start.text-white {
+  background-color: #1c2331;
 }
 
 footer .text-center a:hover {
@@ -429,5 +517,14 @@ footer a[href^="http"]:hover::after {
 /* Smooth Scroll for Footer Links */
 footer a {
   scroll-behavior: smooth;
+}
+
+/* Iframe Styles */
+iframe {
+  border: 0;
+}
+
+.metro-card-img {
+  width: 70%;
 }
 

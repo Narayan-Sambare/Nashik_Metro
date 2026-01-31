@@ -22,13 +22,21 @@
     width: 100%;
     border-radius: 10px;
     color: white;
+    background-color: green;
+}
+
+.metro-card-img {
+    width: 70%;
+}
+
+.footer-margin-top {
+    margin-top: 2%;
 }
 nav{
     font-size: 16px;
-}
-#lblHeading{
-    font-size: 6rem;
+}.lblHeading{
     color: #6351ce;
+    font-size: 3rem;
 }
 
 

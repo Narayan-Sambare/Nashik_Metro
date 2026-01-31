@@ -54,3 +54,11 @@ background: #f68f30 !important;
 .hov:hover{
     background: #ff8b19!important;
 }
+
+.metro-card-img {
+    width: 70%;
+}
+
+.card-width-18rem {
+    width: 18rem;
+}

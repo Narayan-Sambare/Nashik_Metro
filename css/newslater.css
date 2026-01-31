@@ -35,7 +35,19 @@
     color: white;
 
   }
-#lblHeading{
-  font-size: 6rem;
-  color: #6351ce;
+  .lblHeading{
+    color: #6351ce;
+    font-size: 3rem;
+}
+
+.metro-card-img {
+    width: 70%;
+}
+
+.hidden-div {
+    display: none;
+}
+
+.content-margin-top {
+    margin-top: 5%;
 }
