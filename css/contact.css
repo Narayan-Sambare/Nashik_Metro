@@ -88,6 +88,7 @@
     
     .table {
         font-size: 0.85rem;
+
     }
     
     .table th,
@@ -95,7 +96,7 @@
         padding: 0.5rem;
     }
 }
-
+/* 
 @media (max-width: 576px) {
     #lblHeading {
         font-size: 1.8rem;
@@ -150,7 +151,7 @@
         white-space: nowrap;
         font-weight: bold;
     }
-}
+} */
 
 /* Make images responsive */
 img {
@@ -163,5 +164,54 @@ img {
     .container-fluid {
         padding-left: 15px;
         padding-right: 15px;
+    }
+    .table{
+        
+    }
+}
+@media (max-width: 576px) {
+
+    .table {
+        border: none;
+    }
+
+    .table thead {
+        display: none;
+    }
+
+    .table tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #fff;
+    }
+
+    .table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 10px;
+        border: none;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+    }
+
+    .table td:last-child {
+        border-bottom: none;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        /* font-weight: bold; */
+        color: #000000;
+        flex: 1;
+    }
+
+    .table td span,
+    .table td {
+        flex: 1;
+        text-align: left;
     }
 }
